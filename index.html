@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purly - Links que Encantam</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --roxo-escuro: #4A148C;
+            --roxo-claro: #7B1FA2;
+            --roxo-gradient: linear-gradient(135deg, #6A1B9A, #9C27B0);
+            --fundo: #F3E5F5;
+            --texto: #2C2C2C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* Header Estilizado */
+        .header {
+            background: var(--roxo-gradient);
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: -10%;
+            width: 120%;
+            height: 100px;
+            background: rgba(255,255,255,0.1);
+            transform: rotate(-3deg);
+        }
+
+        .site-name {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .slogan {
+            font-size: 1.2rem;
+            color: #FFD700;
+            opacity: 0.9;
+        }
+
+        /* Container Principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Cards de Links */
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .link-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--roxo-gradient);
+        }
+
+        .link-title {
+            color: var(--roxo-escuro);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .link-icon {
+            font-size: 1.5rem;
+            color: var(--roxo-claro);
+        }
+
+        .link-description {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .link-url {
+            display: block;
+            background: #F8F8F8;
+            padding: 0.8rem;
+            border-radius: 8px;
+            color: var(--roxo-claro);
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+
+        .link-url:hover {
+            background: #EFE;
+        }
+
+        /* Banners Estilizados */
+        .banner-section {
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            border: 2px solid var(--roxo-claro);
+            text-align: center;
+        }
+
+        .banner-title {
+            color: var(--roxo-escuro);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        /* Footer Moderno */
+        .footer {
+            background: var(--roxo-gradient);
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .site-name {
+                font-size: 2rem;
+            }
+
+            .link-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-name">PURLY</h1>
+        <p class="slogan">Seus links, mais bonitos que nunca ✨</p>
+    </header>
+
+    <div class="container">
+        <!-- Banner 1 -->
+        <section class="banner-section">
+            <h2 class="banner-title">Patrocinado por <span style="color: var(--roxo-claro);">TechSolutions</span></h2>
+            <!-- Insira seu código de banner aqui -->
+            <div style="height: 250px; background: #F0F0F0; border-radius: 10px;"></div>
+        </section>
+
+        <!-- Seção de Links -->
+        <div class="link-grid">
+            <div class="link-card">
+                <div class="link-title">
+                    <i class="fas fa-rocket link-icon"></i>
+                    Projetos Incríveis
+                </div>
+                <p class="link-description">Acesse meu portfólio de trabalhos criativos.</p>
+                <a href="#" class="link-url">purly.com/portfolio</a>
+            </div>
+
+            <div class="link-card">
+                <div class="link-title">
+                    <i class="fas fa-shopping-cart link-icon"></i>
+                    Loja Virtual
+                </div>
+                <p class="link-description">Produtos exclusivos com desconto especial.</p>
+                <a href="#" class="link-url">purly.com/loja</a>
+            </div>
+
+            <div class="link-card">
+                <div class="link-title">
+                    <i class="fas fa-video link-icon"></i>
+                    Conteúdo VIP
+                </div>
+                <p class="link-description">Vídeos e tutoriais premium para você.</p>
+                <a href="#" class="link-url">purly.com/vip</a>
+            </div>
+        </div>
+
+        <!-- Banner 2 -->
+        <section class="banner-section">
+            <h2 class="banner-title">Destaque da Semana</h2>
+            <div style="height: 250px; background: #F0F0F0; border-radius: 10px;"></div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>© 2024 Purly - Transformando links em experiências</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Feito com ❤ por você</p>
+    </footer>
+
+    <script>
+        // Efeito de hover suave para os cards
+        document.querySelectorAll('.link-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const x = e.pageX - card.offsetLeft;
+                const y = e.pageY - card.offsetTop;
+
+                card.style.transform = `
+                    perspective(1000px)
+                    rotateX(${(y - card.offsetHeight/2) / 15}deg)
+                    rotateY(${-(x - card.offsetWidth/2) / 15}deg)
+                `;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
